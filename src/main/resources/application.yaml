@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/skillup?serverTimezone=GMT&useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: root
+    password: rootroot
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+promotion:
+  #stock-strategy: sync
+  #stock-strategy: sync
+  stock-strategy: optimistic-lock
+order:
+  data-center: 1
+  machine-num: 1
